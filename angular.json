@@ -71,7 +71,8 @@
               "browserTarget": "volunteerClient:build:production"
             },
             "development": {
-              "browserTarget": "volunteerClient:build:development"
+              "browserTarget": "volunteerClient:build:development",
+              "proxyConfig": "src/proxy.config.json"
             }
           },
           "defaultConfiguration": "development"
