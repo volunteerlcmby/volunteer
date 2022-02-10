@@ -23,11 +23,9 @@ export class StudentServise{
     deleteStudent(id:number){
         return this._http.delete("api/student/"+id)
     }
-    getallPerson():Observable<Person[]>{
-        return this._http.get<Person[]>("api/student/")
-    }
+   
     getPersonById( id:number):Observable<Student>{
-        return this._http.get<Student>("api/student/"+id)
+        return this._http.get<Student>("api/student/person/"+id)
     }
     getPersonByNumId( numberId:string):Observable<Student>{
         return this._http.get<Student>("api/student/"+numberId)
@@ -40,11 +38,9 @@ export class StudentServise{
         return this._http.put<Student>("api/student/",person)
     }
     deletePerson(id:number){
-        return this._http.delete("api/student/"+id)
+        return this._http.delete("api/student/person/"+id)
     }
-    getallStudenYears():Observable<StudentYear[]>{
-        return this._http.get<StudentYear[]>("api/student/")
-    }
+    
     getStudentYearById( id:number):Observable<StudentYear>{
         return this._http.get<StudentYear>("api/student/"+id)
     }
@@ -56,7 +52,7 @@ export class StudentServise{
         return this._http.put<Student>("api/student/",studentyear)
     }
     deleteStudentYear(id:number){
-        return this._http.delete("api/student/"+id)
+        return this._http.delete("api/student/studentYear/"+id)
     }
     
     constructor(private _http : HttpClient){
